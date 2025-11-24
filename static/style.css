@@ -1,0 +1,143 @@
+:root {
+  --primary: #005b8f;
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --text: #1f2933;
+  --muted: #52616b;
+  --border: #e1e7ec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.page-header,
+.page-footer {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-footer {
+  border-top: 1px solid var(--border);
+  border-bottom: none;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+nav a {
+  margin-left: 1rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  background: var(--card);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.feature-list {
+  color: var(--muted);
+}
+
+.form-card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: grid;
+  gap: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+label {
+  font-weight: 600;
+}
+
+select,
+textarea,
+button {
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.flash-messages {
+  list-style: none;
+  padding: 0;
+}
+
+.flash-messages li {
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+}
+
+.flash-messages .error {
+  background: #ffecec;
+  color: #8a1f1f;
+  border: 1px solid #f4c2c2;
+}
+
+.flash-messages .success {
+  background: #e7f7ed;
+  color: #0f5e31;
+  border: 1px solid #b7e3c2;
+}

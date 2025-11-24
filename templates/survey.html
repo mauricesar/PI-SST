@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Questionário de Clima e SST</h2>
+<form method="post" class="form-card">
+  <label for="satisfaction">Como você avalia sua satisfação geral no trabalho?</label>
+  <select id="satisfaction" name="satisfaction" required>
+    <option value="">Selecione</option>
+    <option>Muito satisfeito(a)</option>
+    <option>Satisfeito(a)</option>
+    <option>Neutro</option>
+    <option>Insatisfeito(a)</option>
+    <option>Muito insatisfeito(a)</option>
+  </select>
+
+  <label for="safety_perception">Como você percebe a segurança no ambiente de trabalho?</label>
+  <select id="safety_perception" name="safety_perception" required>
+    <option value="">Selecione</option>
+    <option>Muito segura</option>
+    <option>Segura</option>
+    <option>Neutra</option>
+    <option>Insegura</option>
+    <option>Muito insegura</option>
+  </select>
+
+  <label for="support_access">Você sabe onde buscar apoio em situações de risco psicossocial?</label>
+  <select id="support_access" name="support_access" required>
+    <option value="">Selecione</option>
+    <option>Sim, conheço os canais</option>
+    <option>Mais ou menos</option>
+    <option>Não, preciso de orientação</option>
+  </select>
+
+  <label for="comments">Comentários adicionais (opcional)</label>
+  <textarea id="comments" name="comments" rows="4" placeholder="Compartilhe sugestões ou preocupações"></textarea>
+
+  <button type="submit">Enviar resposta</button>
+</form>
+{% endblock %}

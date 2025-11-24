@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Dashboard (agregado)</h2>
+<p>Total de respostas: <strong>{{ total }}</strong></p>
+
+<section class="grid">
+  <article class="card">
+    <h3>Satisfação</h3>
+    <ul>
+      {% for label, count in satisfaction_counts %}
+        <li>{{ label }} — {{ count }}</li>
+      {% else %}
+        <li>Sem respostas registradas.</li>
+      {% endfor %}
+    </ul>
+  </article>
+
+  <article class="card">
+    <h3>Percepção de segurança</h3>
+    <ul>
+      {% for label, count in safety_counts %}
+        <li>{{ label }} — {{ count }}</li>
+      {% else %}
+        <li>Sem respostas registradas.</li>
+      {% endfor %}
+    </ul>
+  </article>
+
+  <article class="card">
+    <h3>Acesso a apoio</h3>
+    <ul>
+      {% for label, count in support_counts %}
+        <li>{{ label }} — {{ count }}</li>
+      {% else %}
+        <li>Sem respostas registradas.</li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>
+{% endblock %}
