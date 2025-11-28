@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="dashboard-header">
+  <h2>Ouvidoria - Respostas (ADM)</h2>
+  <p class="muted">Veja todas as mensagens enviadas e registre suas respostas.</p>
+</div>
+
+<section class="messages-grid">
+  {% for message in messages %}
+    <article class="card">
+      <header class="message-head">
+        <div>
+          <p class="badge">{{ message.category }}</p>
+          <h3>{{ message.title }}</h3>
+          <p class="muted">Enviado por {{ message.user.name }} em {{ message.created_at.strftime('%d/%m/%Y %H:%M') }}</p>
+        </div>
+        <div class="status {{ 'answered' if message.response else 'pending' }}">
+          {{ 'Respondida' if message.response else 'Pendente' }}
+        </div>
+      </header>
+      <p class="message-body">{{ message.description }}</p>
+
+      {% if message.response %}
+        <div class="response-block">
+          <p class="muted">Resposta registrada em {{ message.responded_at.strftime('%d/%m/%Y %H:%M') if message.responded_at else '' }}</p>
+          <p>{{ message.response }}</p>
+        </div>
+      {% else %}
+        <form method="post" class="response-form">
+          <input type="hidden" name="message_id" value="{{ message.id }}" />
+          <label>
+            Resposta
+            <textarea name="response" rows="3" placeholder="Escreva uma orientação ou encaminhamento" required></textarea>
+          </label>
+          <div class="actions">
+            <button type="submit" class="primary">Enviar resposta</button>
+          </div>
+        </form>
+      {% endif %}
+    </article>
+  {% else %}
+    <p class="muted">Nenhuma mensagem enviada ainda.</p>
+  {% endfor %}
+</section>
+{% endblock %}

@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 <section class="hero">
-  <h2>Prova de conceito em Flask</h2>
+  <h2>GuiaTEC - Prova de conceito em Flask</h2>
   <p>
     Esta aplicação minimalista demonstra como coletar respostas de clima/SST com Flask,
-    HTML/CSS e um banco SQLite. Use o menu para acessar o questionário ou visualizar um
-    resumo agregado das respostas.
+    HTML/CSS e um banco SQLite. Agora contamos com controle de acesso: somente usuários
+    autenticados respondem o questionário e usuários técnicos (ADM) visualizam o dashboard
+    e o guia de orientação da ouvidoria.
   </p>
   <ul class="feature-list">
-    <li>Formulário simples com campos obrigatórios</li>
-    <li>Persistência em banco SQL (SQLite por padrão)</li>
-    <li>Dashboard com contagens agregadas</li>
+    <li>Login/cadastro com perfis de colaborador ou usuário técnico (ADM)</li>
+    <li>Formulário de clima e SST disponível apenas para usuários logados</li>
+    <li>Dashboard e guia exclusivos para o perfil ADM</li>
   </ul>
 </section>
 {% endblock %}

@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Dashboard (agregado)</h2>
-<p>Total de respostas: <strong>{{ total }}</strong></p>
+<div class="dashboard-header">
+  <h2>Dashboard GuiaTEC (agregado)</h2>
+  <p>Total de respostas: <strong>{{ total }}</strong></p>
+</div>
 
 <section class="grid">
   <article class="card">
@@ -33,6 +35,21 @@
         <li>{{ label }} — {{ count }}</li>
       {% else %}
         <li>Sem respostas registradas.</li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>
+
+<section class="grid">
+  <article class="card">
+    <h3>Ouvidoria</h3>
+    <p>Mensagens enviadas: <strong>{{ total_messages }}</strong></p>
+    <p>Mensagens respondidas: <strong>{{ answered_messages }}</strong></p>
+    <ul class="compact-list">
+      {% for label, count in message_counts %}
+        <li>{{ label }} — {{ count }}</li>
+      {% else %}
+        <li>Nenhuma mensagem registrada.</li>
       {% endfor %}
     </ul>
   </article>

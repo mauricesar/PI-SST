@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero-card narrow">
+  <h2>Ouvidoria GuiaTEC</h2>
+  <p class="muted">Envie uma mensagem segura para relatar reclamações, ocorrências, sugestões ou elogios.</p>
+  <form method="post" class="form-grid">
+    <label>
+      Tipo da mensagem
+      <select name="category" required>
+        <option value="" disabled selected>Selecione</option>
+        {% for cat in categories %}
+          <option value="{{ cat }}">{{ cat }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>
+      Título
+      <input type="text" name="title" placeholder="Informe um título claro" required />
+    </label>
+    <label class="full">
+      Descrição
+      <textarea name="description" rows="5" placeholder="Descreva o contexto e o que aconteceu" required></textarea>
+    </label>
+    <div class="actions full">
+      <button type="submit" class="primary">Enviar mensagem</button>
+    </div>
+  </form>
+</section>
+{% endblock %}
