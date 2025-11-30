@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="info-page">
+  <div class="info-card about-card">
+    <h2>Sobre nós</h2>
+    <div class="about-block">
+      <div class="about-image">
+        <img src="{{ url_for('static', filename='imagem4.jpeg') }}" alt="Equipe de desenvolvimento GuiaTEC" />
+      </div>
+      <div class="about-text">
+        <h3>Quem construiu a experiência digital</h3>
+        <p>
+          A construção da parte digital foi feita durante o curso de Programador Web, onde assumiu-se o desafio 
+          de estruturar e dar vida ao site.
+        </p>
+        <p>
+          O resultado é um espaço moderno e intuitivo, que une estética, tecnologia e praticidade em um só
+          lugar.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-block reverse">
+      <div class="about-image">
+        <img src="{{ url_for('static', filename='imagem5.jpeg') }}" alt="Profissional de segurança do trabalho" />
+      </div>
+      <div class="about-text">
+        <h3>Por que segurança do trabalho importa</h3>
+        <p>
+          Segurança do trabalho é cuidar das pessoas que fazem a empresa acontecer: prevenir acidentes,
+          preservar a saúde e criar um ambiente onde todos se sintam protegidos para colaborar.
+        </p>
+        <p>
+          Com processos claros e canais abertos, reduzimos riscos, fortalecemos a confiança e garantimos que
+          cada voz seja ouvida na construção de um local de trabalho mais humano.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

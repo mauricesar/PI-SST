@@ -14,4 +14,21 @@
     <li>Dashboard e guia exclusivos para o perfil ADM</li>
   </ul>
 </section>
+
+<section class="home-buttons">
+  <div class="cta-grid">
+    <a class="cta-card" href="{{ url_for('how_to_use') }}">
+      <div class="cta-image" style="background-image: url({{ url_for('static', filename='imagem1.jpeg') }});"></div>
+      <span>Como utilizar</span>
+    </a>
+    <a class="cta-card" href="{{ url_for('about') }}">
+      <div class="cta-image" style="background-image: url({{ url_for('static', filename='imagem2.jpeg') }});"></div>
+      <span>Sobre nós</span>
+    </a>
+    <a class="cta-card" href="{{ url_for('objective') }}">
+      <div class="cta-image" style="background-image: url({{ url_for('static', filename='imagem3.jpeg') }});"></div>
+      <span>Objetivo</span>
+    </a>
+  </div>
+</section>
 {% endblock %}

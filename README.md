@@ -43,6 +43,12 @@ Esta prova de conceito mostra como implementar rapidamente um módulo web para c
    - Colaboradores podem responder o questionário e enviar mensagens na **Ouvidoria**.
    - Usuários técnicos (ADM) podem acessar questionário, dashboard, guia, **Responder Ouvidoria** e visualizar as métricas da ouvidoria.
 
+### Solução de problemas comuns
+- Caso a interface apareça sem imagens ou com espaços vazios, verifique se os JPEGs estão na pasta `static/` com os nomes:
+  - `guidetec-logo.jpeg`, `imagem1.jpeg`, `imagem2.jpeg`, `imagem3.jpeg`, `imagem4.jpeg`, `imagem5.jpeg`
+- A aplicação exibe um aviso no console ao iniciar se algum desses arquivos estiver faltando.
+- Execute o servidor a partir da raiz do projeto (onde está `app.py`) para garantir que os caminhos de `static/` sejam resolvidos corretamente.
+
 ### Configurações
 - **Banco**: a aplicação cria automaticamente `instance/pi_sst.db` (SQLite). Para usar outro banco, defina `DATABASE_URL` com uma URL suportada pelo SQLAlchemy.
 - **Segredo de sessão**: defina `SECRET_KEY` para um valor seguro em produção.

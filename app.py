@@ -29,6 +29,22 @@ def create_app() -> Flask:
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db = SQLAlchemy(app)
 
+    static_dir = os.path.join(app.root_path, "static")
+    required_assets = [
+        "guidetec-logo.jpeg",
+        "imagem1.jpeg",
+        "imagem2.jpeg",
+        "imagem3.jpeg",
+        "imagem4.jpeg",
+        "imagem5.jpeg",
+    ]
+    for asset in required_assets:
+        asset_path = os.path.join(static_dir, asset)
+        if not os.path.exists(asset_path):
+            print(
+                f"[GuiaTEC aviso] Arquivo ausente em static/: {asset} — adicione o JPEG solicitado para evitar falhas visuais."
+            )
+
     class User(db.Model):  # type: ignore[name-defined]
         __tablename__ = "users"
 
@@ -126,6 +142,18 @@ def create_app() -> Flask:
     @app.route("/")
     def index() -> str:
         return render_template("index.html")
+
+    @app.route("/como-utilizar")
+    def how_to_use() -> str:
+        return render_template("how_to_use.html")
+
+    @app.route("/sobre-nos")
+    def about() -> str:
+        return render_template("about.html")
+
+    @app.route("/objetivo")
+    def objective() -> str:
+        return render_template("objective.html")
 
     @app.route("/survey", methods=["GET", "POST"])
     @login_required

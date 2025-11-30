@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="info-page">
+  <div class="info-card rich-guide">
+    <header class="info-header">
+      <div>
+        <p class="eyebrow">Guia prático</p>
+        <h2>Como utilizar a GuiaTEC</h2>
+        <p class="lead">Siga estes passos para tirar o máximo da plataforma: manter o clima seguro, registrar ocorrências e acompanhar indicadores em tempo real.</p>
+      </div>
+    </header>
+
+    <div class="step-grid">
+      <article class="step-card">
+        <div class="step-icon">1</div>
+        <div>
+          <h3>Entrar ou se cadastrar</h3>
+          <p>Crie sua conta como colaborador ou acesse com o login fornecido. Para novos usuários criados pelo ADM, use as credenciais recebidas e personalize seu nome de exibição.</p>
+        </div>
+      </article>
+      <article class="step-card">
+        <div class="step-icon">2</div>
+        <div>
+          <h3>Navegar pela Home</h3>
+          <p>Use os botões da tela inicial para conhecer a plataforma: <strong>Como utilizar</strong>, <strong>Sobre nós</strong> e <strong>Objetivo</strong>. Eles trazem visão geral, propósito e bastidores do GuiaTEC.</p>
+        </div>
+      </article>
+      <article class="step-card">
+        <div class="step-icon">3</div>
+        <div>
+          <h3>Responder o questionário</h3>
+          <p>No menu, acesse <strong>Questionário</strong> (disponível para usuários autenticados) e preencha as respostas sobre segurança, clima e apoio. O envio é imediato e pode ser repetido conforme novas percepções.</p>
+        </div>
+      </article>
+      <article class="step-card">
+        <div class="step-icon">4</div>
+        <div>
+          <h3>Registrar na Ouvidoria</h3>
+          <p>Abra a aba <strong>Ouvidoria</strong> para enviar relatos: escolha se é reclamação, elogio, sugestão ou alerta. Adicione título e descrição; os ADMs podem visualizar e responder.</p>
+        </div>
+      </article>
+      <article class="step-card">
+        <div class="step-icon">5</div>
+        <div>
+          <h3>Acompanhar resultados (ADM)</h3>
+          <p>Usuários técnicos acessam <strong>Dashboard</strong> para ver indicadores de satisfação, segurança percebida e estatísticas de ouvidoria, além do <strong>Guia</strong> com protocolos de acolhimento.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="info-list">
+      <div>
+        <h3>Perfis e acessos</h3>
+        <ul>
+          <li><strong>Colaborador:</strong> pode responder ao questionário e enviar mensagens na ouvidoria.</li>
+          <li><strong>ADM:</strong> possui todos os acessos do colaborador, além de Dashboard, Guia e cadastro de novos usuários com escolha de perfil.</li>
+          <li><strong>Cadastro público:</strong> cria sempre um colaborador; apenas ADMs criam novos ADMs.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Boas práticas de uso</h3>
+        <ul>
+          <li>Mantenha seu nome de exibição curto para leitura clara no cabeçalho.</li>
+          <li>Envie mensagens de ouvidoria com contexto e exemplos para acelerar respostas.</li>
+          <li>Revisite o questionário periodicamente para refletir mudanças no clima.</li>
+          <li>ADMs: consulte o Guia antes de responder ou encaminhar relatos sensíveis.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Dúvidas rápidas</h3>
+        <ul>
+          <li><strong>Erro ao abrir imagens?</strong> Verifique se os JPEGs estão na pasta <code>static/</code>.</li>
+          <li><strong>Sem acesso ao Dashboard?</strong> Confirme se sua conta foi criada como ADM.</li>
+          <li><strong>Senha esquecida?</strong> Peça a um ADM para recriar seu usuário.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
