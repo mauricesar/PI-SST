@@ -1,0 +1,19 @@
+name: pi_sst_flutter_ui
+version: 0.1.0+1
+description: >-
+  Telas de cadastro inspiradas no protótipo fornecido, focadas apenas em elementos visuais.
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
